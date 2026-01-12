@@ -35,7 +35,8 @@
 ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge)
 </p>
 
-![Snake animation](https://github.com/kimbi12/kimbi12/blob/output/github-contribution-grid-snake.svg)
+![Snake animation](https://raw.githubusercontent.com/kimbi12/kimbi12/main/dist/github-contribution-grid-snake.svg)
+
 
 
 
