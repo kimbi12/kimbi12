@@ -1,0 +1,30 @@
+name: GitHub Contribution Snake
+
+on:
+  workflow_dispatch:
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create dist folder
+        run: mkdir -p dist
+
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: kimbi12
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "kimbidenis67@gmail.com"
+          git config --local user.name "Kimbi Denis"
+
+      - name: Commit SVG
+        run: |
+          git add dist/github-contribution-grid-snake.svg
+          git commit -m "Update snake" || echo "No changes to commit"
+          git push
