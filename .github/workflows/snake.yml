@@ -10,7 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          persist-credentials: false  # important for using GITHUB_TOKEN
+          persist-credentials: false  # important to use GITHUB_TOKEN
 
       - name: Create dist folder
         run: mkdir -p dist
